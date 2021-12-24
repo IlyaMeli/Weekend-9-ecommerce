@@ -1,0 +1,36 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(233, 233, 233, 0.733);
+  border: 2px solid rgb(216, 216, 216);
+  align-items: center;
+  width: 20rem;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.price-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.discount {
+  font-size: 0.5rem;
+  text-decoration: line-through;
+}
+
+.add-to-cart {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: rgb(90, 90, 90);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  transform: translateY(0);
+}
+.add-to-cart:hover {
+  background-color: rgb(236, 205, 205);
+  color: black;
+  transform: translateY(3px);
+}
