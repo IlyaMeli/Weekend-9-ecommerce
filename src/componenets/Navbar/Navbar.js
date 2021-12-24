@@ -9,7 +9,7 @@ const Navbar = ({ cartCount }) => {
         <Link to="/">Home</Link>
         <div className="navbar-right">
           <Link to="/products">Products</Link>
-          <Link to="" className="cart">
+          <Link to="/cart" className="cart">
             <div>{cartCount}</div>
             <div>
               <i className="fas fa-shopping-cart fa-lg"></i>

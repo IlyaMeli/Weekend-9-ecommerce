@@ -2,7 +2,7 @@ import React from "react";
 import "./productcard.css";
 const ProductCard = ({
   product: { name, description, price, img_URL, discount },
-  handleClick,
+  handleClick,product
 }) => {
   return (
     <div className="product-card">
@@ -13,7 +13,7 @@ const ProductCard = ({
         <span>{price}$</span>
         <span className="discount">{discount}$</span>
       </div>
-      <button className="add-to-cart" onClick={handleClick}>
+      <button className="add-to-cart" onClick={() =>handleClick(product)}>
         Add To Card
       </button>
     </div>
