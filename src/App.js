@@ -16,6 +16,15 @@ const App = () => {
     let sign = type === "plus" ? 1 : -1;
     cartListCopy[idx].quantity += sign;
     setCartList(cartListCopy);
+    setCartCount(cartCount + sign);
+  };
+
+  const handleDelete = (product) => {
+    const dataCopy = [...cartList];
+    const newData = dataCopy.filter((item) => {
+      return item.product.id !== product.id;
+    });
+    setCartList(newData);
   };
 
   const addToCart = (product) => {
@@ -50,7 +59,11 @@ const App = () => {
             <ProductList cartUpdate={addToCart} />
           </Route>
           <Route path="/cart" exact>
-            <Cart quantityControl={quantityControl} cartList={cartList} />
+            <Cart
+              quantityControl={quantityControl}
+              cartList={cartList}
+              handleDelete={handleDelete}
+            />
           </Route>
         </Switch>
       </BrowserRouter>
