@@ -5,7 +5,7 @@ import data from "../../data";
 import "./productlist.css";
 
 const ProductList = ({ cartUpdate }) => {
-  const [products, setProducts] = useState(data);
+  const [products] = useState(data);
 
   return (
     <div className="productlist">
