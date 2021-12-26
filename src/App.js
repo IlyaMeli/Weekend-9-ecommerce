@@ -19,12 +19,13 @@ const App = () => {
     setCartCount(cartCount + sign);
   };
 
-  const handleDelete = (product) => {
+  const handleDelete = (product, quantity) => {
     const dataCopy = [...cartList];
     const newData = dataCopy.filter((item) => {
       return item.product.id !== product.id;
     });
     setCartList(newData);
+    setCartCount(cartCount - quantity);
   };
 
   const addToCart = (product) => {

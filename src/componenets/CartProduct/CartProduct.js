@@ -22,7 +22,7 @@ const CartProduct = ({
         <div className="cart-product-price">Price: {product.price}$</div>
       </div>
       <button
-        onClick={() => handleDelete(product)}
+        onClick={() => handleDelete(product, quantity)}
         className="cart-product-del"
       >
         DELETE
