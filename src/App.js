@@ -15,6 +15,7 @@ const App = () => {
     const cartListCopy = [...cartList];
     let sign = type === "plus" ? 1 : -1;
     cartListCopy[idx].quantity += sign;
+    if (cartListCopy[idx].quantity < 1) return;
     setCartList(cartListCopy);
     setCartCount(cartCount + sign);
   };
